@@ -1,0 +1,111 @@
+<!doctype html>
+
+<head>
+    <title>Shared Chore Board</title>
+    <link href="css/bootstrap.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootcamp.min.css" type= "text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet"
+
+    <!-- Bootstrap -->
+    <!-- this is a comment in HTML -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <buvtton class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fa fa-bars"></i>
+				</button>
+                <a class="navbar-brand js-scroll-trigger" href="/">Apartment 123</a>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="profile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="chorelist">Full Chore List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="settings">Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Body -->
+        <div>
+            <h2 style="text-align: center">Welcome, Sam!</h2>
+
+            <!-- Today's Chores -->
+            <h3 class="box box-banner text-center">Here are your chores for today:</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a class="locationButton" href="chorelist">
+                            <div class="box box-location">Kitchen</div>
+                        </a>
+                        <p>(1)</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <a class="locationButton" href="chorelist">
+                            <div class="box box-location">Bathroom</div>
+                        </a>
+                        <p>(3)</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <a class="locationButton" href="chorelist">
+                            <div class="box box-location">Bedroom</div>
+                        </a>
+                        <p>(None!)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming chore -->
+            <h3 class="box box-banner text-center">Next Upcoming Chore:</h3>
+            <div class="container">
+                <p>Chore: Vacuum Floor</p>
+                <p>Date: 2/10/18</p>
+                <p>Location: Living Room</p>
+            </div>
+
+            <div class="buttonMain">
+                <div class="buttonManage">
+                    <a href="chorelist">
+                        <h3 class="box box-default text-center">Manage</h3>
+                    </a>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Include all compiled plugins (blelow), or include individual files as needed -->
+    <script src="public/js/bootstrap.min.js"></script>
+    <script src="public/js/custom.js"></script>
+    <script src="js/manageChores.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>
