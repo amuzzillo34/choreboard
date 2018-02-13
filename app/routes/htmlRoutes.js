@@ -10,6 +10,15 @@ htmlRouter.get('/', function(req,res){
 
 
 htmlRouter.get('/chorelist', (req, res) => res.sendFile(path.resolve(__dirname, '../public/chorelist.html')))
+
+htmlRouter.get('/profile', (req, res) => res.sendFile(path.resolve(__dirname, '../public/profile.html')))
+
+htmlRouter.get('/settings', (req, res) => res.sendFile(path.resolve(__dirname, '../public/settings.html')))
+
+htmlRouter.get('/chore', (req, res) => res.sendFile(path.resolve(__dirname, '../public/chore.html')))
+
+
+
 module.exports = htmlRouter
 
 /*function css(req,res) {
