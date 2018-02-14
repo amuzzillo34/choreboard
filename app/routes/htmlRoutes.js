@@ -17,6 +17,9 @@ htmlRouter.get('/settings', (req, res) => res.sendFile(path.resolve(__dirname, '
 
 htmlRouter.get('/chore', (req, res) => res.sendFile(path.resolve(__dirname, '../public/chore.html')))
 
+htmlRouter.get('/addChore', (req, res) => res.sendFile(path.resolve(__dirname, '../public/addChore.html')))
+
+
 
 
 module.exports = htmlRouter

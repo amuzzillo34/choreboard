@@ -10,6 +10,7 @@ var path = require('path');
 // Example route
 // var user = require('./routes/user');
 var htmlRouter = require(path.join(__dirname, './app/routes/htmlRoutes.js'))
+var Chore = require(path.join(__dirname,'./app/data/chore.js'))
 
 var app = express();
 
