@@ -4,10 +4,11 @@ var htmlRouter = express.Router()
 
 
 htmlRouter.get('/', function(req,res){
-    res.sendFile(path.resolve(__dirname, '../public/index.html'))
+    res.sendFile(path.resolve(__dirname, '../public/login.html'))
 //    css(req,res);
 });
 
+htmlRouter.get('/login', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index.html')))
 
 htmlRouter.get('/chorelist', (req, res) => res.sendFile(path.resolve(__dirname, '../public/chorelist.html')))
 
