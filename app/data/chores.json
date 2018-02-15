@@ -1,49 +1,8 @@
 [{
-    "name": "Mop Floor",
-    "date": "2-11-18",
-    "location": "Kitchen",
-    "description": "Grab the mop and its holder from the closet. Fill with water, blah blah, blah blah, finish mopping",
-    "isCompleted": true
-}, {
-    "name": "Mop Floor",
-    "date": "2-11-18",
-    "location": "Living Room",
-    "description": "Grab the mop and its holder from the closet. Fill with water, blah blah, blah blah, finish mopping",
-    "isCompleted": true
-}, {
-    "name": "Do your laundry, bitch",
-    "date": "2-11-18",
-    "location": "Laundry Room",
-    "description": "Grab the mop and its holder from the closet. Fill with water, blah blah, blah blah, finish mopping",
-    "isCompleted": true
-}, {
-    "name": "OUTRAGEOUS",
-    "date": "6666-06-06",
-    "location": "Bedroom",
-    "description": "Satan is in my bed",
-    "isCompleted": false
-}, {
-    "name": "",
-    "date": "",
-    "location": "Kitchen",
-    "description": "",
-    "isCompleted": false
-}, {
-    "name": "yoyoyoy;o",
-    "date": "2018-12-31",
-    "location": "Bedroom",
-    "description": "sadfsdfdsfsdfsd",
-    "isCompleted": false
-}, {
-    "name": "MY NAME IS SOMETHING",
-    "date": "2018-01-01",
-    "location": "Bedroom",
-    "description": "dsagsdagwegwe",
-    "isCompleted": false
-}, {
-    "name": "ANTHONY IS COOL",
-    "date": "2018-01-01",
-    "location": "Bedroom",
-    "description": "HE TRIED",
-    "isCompleted": false
-}]
+        "name": "Mop Floor",
+        "date": "2022-02-01",
+        "location": "Kitchen",
+        "description": "Grab the mop and its holder from the closet. Fill with water, blah blah, blah blah, finish mopping",
+        "isCompleted": false
+}
+]
