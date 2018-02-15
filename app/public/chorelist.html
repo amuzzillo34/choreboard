@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/bootcamp.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -51,30 +51,29 @@
 
         <!-- Main Body -->
         <div>
-            <h3 style="text-align: center">Manage Chores</h3>
+            <h3 style="text-align: center">Chores</h3>
 
             <div class="locationLabel">
-                <h4>Kitchen:</h4>
-                <a href="chore">
-                    <h5 class="box box-chore text-center">Throw Out Trash</h5>
-                </a>
-                <a href="chore">
-                    <h5 class="box box-chore text-center">Wash Dishes</h5>
-                </a>
-                <h4>Bathroom:</h4>
-                <a href="chore">
-                    <h5 class="box box-chore text-center">Throw Out Trash</h5>
-                </a>
-                <a href="chore">
-                    <h5 class="box box-chore text-center">Clean Toilet</h5>
-                </a>
-                <a href="chore">
-                    <h5 class="box box-chore text-center">Wipe Down Sink</h5>
-                </a>
-                <h4>Living Room:</h4>
-                <a href="chore">
-                    <h5 class="box box-chore text-center">Dust</h5>
-                </a>
+                <div id="Kitchen">
+                    <h4 id="kitchen">Kitchen:</h4>
+                </div>
+
+                <div id="Bedroom">
+                    <h4 id="bedroom">Bedroom:</h4>
+                </div>
+
+                <div id="LaundryRoom">
+                    <h4 id="laundryroom">Laundry Room:</h4>
+                </div>
+
+                <div id="Bathroom">
+                    <h4 id="bathroom">Bathroom:</h4>
+                </div>
+
+                <div id="LivingRoom">
+                    <h4 id="livingroom">Living Room:</h4>
+                </div>
+
             </div>
 
             <!-- Add chore button -->
@@ -88,9 +87,36 @@
         <script src="https://code.jquery.com/jquery.js"></script>
 
         <!-- Include all compiled plugins (blelow), or include individual files as needed -->
-        <script src="public/js/bootstrap.min.js"></script>
-        <script src="public/js/custom.js"></script>
-        <script src="public/js/manageChores.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script>
+            function viewChore(uniqueID) {
+                window.location.href = '/chore/'+uniqueID
+            }
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Typical action to be performed when the document is ready:
+                    console.log(xhttp, '!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                    console.log(xhttp.responseText);
+                    var jsonData = JSON.parse(xhttp.responseText)
+
+
+                    for (var i = 0; i < jsonData.length; i++) {
+                        if (!jsonData[i].isCompleted) {
+                            var selectorString = "#" + jsonData[i].location
+                            var choreIndex = i
+                            $(selectorString).append("<button id=" + choreIndex + " onclick='viewChore(this.id)'>" + jsonData[i].name + "</button>" + "<p>" + jsonData[i].date + "</p>");
+                        }
+                    }
+
+                }
+            };
+            xhttp.open("GET", "/api/chores", true);
+            xhttp.send();
+
+        </script>
 
 </body>
 

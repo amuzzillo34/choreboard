@@ -3,17 +3,17 @@
 <html>
 
 <head>
-	<title>Shared Chore Board</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Chore Board</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Bootstrap -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/bootcamp.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	<!-- this is a comment in HTML -->
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,38 +24,71 @@
 </head>
 
 <body>
-	<div class="container">
+    <div class="container">
 
-		<!-- Navigation -->
-		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-			<div class="container">
-				<button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand js-scroll-trigger" href="/">Apartment 123</a>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="profile">Profile</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="chorelist">Full Chore List</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="settings">Settings</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+                <a class="navbar-brand js-scroll-trigger" href="../">Apartment 123</a>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="../profile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="../chorelist">Full Chore List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="../settings">Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="choreContainer">
+            <h3>Individual chore page</h3>
+        </div>
 
-		<h3>Individual chore page</h3>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Include all compiled plugins (blelow), or include individual files as needed -->
+        <script src="../js/custom.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var urlArr = window.location.href.split('/')
+            var jsonID = urlArr[urlArr.length - 1]
+            function parseHTMLString(name, date, location, description) {
+                var paramsArr = [name,date,location,description, 'Back', 'Complete']
+                var stringComponents = ['<p>','</p>','<p>','</p>','<p>','</p>','<p>','</p>','<button>','</button>','<button>','</button>']
+                var masterStr = ''
+                for (var i = 0; i<stringComponents.length; i += 2) {
+                    masterStr += stringComponents[i] + paramsArr[i/2] + stringComponents[i+1]
+                }
+                return masterStr
+            }
+            
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Typical action to be performed when the document is ready:
+                    var choreObj = JSON.parse(xhttp.responseText)
+                    console.log(choreObj)
+                    var htmlStr = parseHTMLString(choreObj.name, choreObj.date, choreObj.location, choreObj.description)
+                    console.log(htmlStr)
+                    $('.choreContainer').append(htmlStr)
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<!-- Include all compiled plugins (blelow), or include individual files as needed -->
-<script src="js/custom.js"></script>
-<script src="js/bootstrap.min.js"></script>
+                }
+            };
+            xhttp.open("POST", "/api/chore/"+jsonID, true);
+            xhttp.send();
+            
+            
+
+        </script>
 
 </body>
 
