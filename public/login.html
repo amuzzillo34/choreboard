@@ -1,0 +1,48 @@
+<!doctype html>
+
+<head>
+    <title>Shared Chore Board</title>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Style/Bootstrap-->
+    <link href="css/bootstrap.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type= "text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body style="background-color: #272932">
+
+  <div class="container loginStyle">
+    <!-- Logo/App name -->
+    <div class="appName">
+      <h1>Shared Chore Board</h1>
+    </div>
+
+    <hr>
+
+    <!-- Login form -->
+		<form id="loginForm" role="form" method="get" action="/login">
+  		<h3>Login</h3>
+    		<div class="form-group">
+      		<label for="username">Username:</label>
+       	  <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+    	  </div>
+    	 	<div class="form-group">
+      		<label for="password">Password:</label>
+      		<input type="text" class="form-control" id="password" placeholder="Password" name="password">
+  	  	</div>
+  	  <input type="submit" id="submitBtn" class="btn btn-default" value="Login"></input>
+	 	</form>
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Include all compiled plugins (blelow), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -17,6 +17,8 @@ htmlRouter.get('/chore/:id', function(req,res){
     res.sendFile(path.join(__dirname, '../public/chore.html'))
 });
 
+htmlRouter.get('/index', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index.html')))
+
 htmlRouter.get('/chorelist', (req, res) => res.sendFile(path.resolve(__dirname, '../public/chorelist.html')))
 
 htmlRouter.get('/profile', (req, res) => res.sendFile(path.resolve(__dirname, '../public/profile.html')))

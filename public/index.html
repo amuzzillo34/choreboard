@@ -1,0 +1,89 @@
+<!doctype html>
+
+<head>
+    <title>Shared Chore Board</title>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style/Bootstrap-->
+    <link href="css/bootstrap.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" type= "text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type= "text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: #272932">
+    <div class="container infoMargin">
+
+      <div class="appName">
+        <h2>Apartment 123</h2>
+      </div>
+
+      <hr>
+        <!-- Main Body -->
+        <div class="container">
+            <h2>Welcome, Sam!</h2>
+
+            <!-- Today's Chores -->
+            <h3 class="box box-banner">Here are today's chores:</h3>
+              <div class="row locations">
+                  <div class="col-xs-4">
+                      <a href="chorelist">
+                        <div class="box box-location">Kitchen</div>
+                      </a>
+                      <p>(1)</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <a href="chorelist">
+                      <div class="box box-location">Bathroom</div>
+                    </a>
+                    <p>(3)</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <a href="chorelist">
+                      <div class="box box-location">Bedroom</div>
+                    </a>
+                    <p>(None!)</p>
+                  </div>
+                </div>
+
+
+            <div class="buttonMain">
+                <div class="buttonManage">
+                    <a href="chorelist">
+                        <h3 class="box box-default text-center">View All</h3>
+                    </a>
+                </div>
+                <div class="buttonManage">
+                    <a href="profile">
+                        <h3 class="box box-default text-center">Profile</h3>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+      var x = document.getElementById("mainNav");
+      if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+    }
+    </script>
+
+    <!-- Include all compiled plugins (blelow), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
