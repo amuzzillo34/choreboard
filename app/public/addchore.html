@@ -11,7 +11,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-theme.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/bootcamp.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- this is a comment in HTML -->
 
@@ -23,64 +23,51 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="backgroundColor infoMargin">
     <div class="container">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fa fa-bars"></i>
-				</button>
-                <a class="navbar-brand js-scroll-trigger" href="/">Apartment 123</a>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="profile">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="chorelist">Full Chore List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="settings">Settings</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <div class="header">
+        <a href="index">Apartment 123</a>
+      </div>
 
-        <h1>Add Chore Page</h1>
+      <h3>Add Chore</h3>
 
-        <form action='/api/addChore' method="post">
+      <form action='/api/addChore' method="post">
 
-            <h3>Chore Name: </h3>
-                <input type="text" name="name">
-                
-            <h3>Date: </h3>
-                <input id="date" type="date" name="date">
-            <h3>Location: </h3>
-                <select name="location">
-                    <option value="Kitchen">Kitchen</option>
-	    	        <option value="Bedroom">Bedroom</option>
-	    	        <option value="LivingRoom">Living Room</option>
-	    	        <option value="Bathroom">Bathroom</option>
-	    	        <option value="LaundryRoom">Laundry Room</option>
-                </select>
-            <h3>Description: </h3>
-                <input type="text" name="description">
+        <h4 class="choreName">Chore Name: </h4>
+        <input type="text" name="name">
 
-            <br><br>
-            <input type="submit">
-        </form>
+        <h4 class="choreName">Date: </h4>
+          <input id="date" type="date" name="date">
 
+        <!-- ADD SECTION FOR SIGNING UP FOR CHORE -->
+        <h4 class="choreName">Who:</h4>
+          <input id="who" type="who" name="who">
+        <!-- ****************************** -->
 
+        <h4 class="choreName">Location: </h4>
+          <select name="location" class="dropdown">
+            <option value="Select">Select</option>
+            <option value="Kitchen">Kitchen</option>
+	    	    <option value="Bedroom">Bedroom</option>
+	    	    <option value="LivingRoom">Living Room</option>
+	    	    <option value="Bathroom">Bathroom</option>
+	    	    <option value="LaundryRoom">Laundry Room</option>
+          </select>
 
+        <h4 class="choreName">Description: </h4>
+          <input type="text" name="description">
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <!-- Include all compiled plugins (blelow), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+        <div class="buttonSubmit box box-default text-center">
+          <input type="submit">
+        </div>
+
+      </form>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <!-- Include all compiled plugins (blelow), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
