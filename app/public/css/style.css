@@ -125,12 +125,21 @@ li a {
   background-color: #BBDEF0;
 }
 
+.loginBtn{
+  margin-bottom: 20px
+}
+
 .box-chore{
   padding: 4% 0;
   margin: 3% 0;
   color: #BBDEF0;
   border: 2px solid #BBDEF0;
   background-color: #272932;
+}
+
+.homeBtn{
+  height: 25px;
+  margin-right: 10px;
 }
 
 .smallBtn{
