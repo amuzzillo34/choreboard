@@ -32,29 +32,8 @@ a{
 }
 
 /*Strip the ul of padding and list styling*/
-ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    position: absolute;
-}
-
-/*Create a horizontal list with spacing*/
-li {
-    display:inline-block;
-    float: left;
-}
-
-/*Style for menu links*/
-li a {
-    display:block;
-    min-width:140px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #BBDEF0;
-    text-decoration: none;
+ol {
+  position: relative;
 }
 
 /*background color for each page */
@@ -143,7 +122,7 @@ li a {
 }
 
 .smallBtn{
-  width: 5em;
+  width: 10em;
   text-align: center;
   color: #272932;
   margin: 10% 5% 0 0;
@@ -162,10 +141,18 @@ li a {
   background-color: #BBDEF0;
 }
 
+.choreBtn{
+  width: 10em;
+  padding: 2% 5%;
+  margin: 2% 10% 0 0;
+  color: #272932;
+  background-color: #BBDEF0;
+}
+
 /* Chore page */
 .underline{
   border-bottom: 1px solid white;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 
 /*Add Chore Page*/

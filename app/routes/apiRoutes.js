@@ -9,18 +9,19 @@ var jsonFile = path.join(__dirname, '../data/chores.json')
 apiRouter.post('/api/addChore', function (req, res) {
     var newChore = new choreJS()
     newChore.addName(req.body.name)
+    //need code that captures the who information from form
     newChore.addDate(req.body.date)
     console.log(req.body.location, '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     newChore.addLocation(req.body.location)
-    newChore.addDescription(req.body.description)    
-    
-    
+    newChore.addDescription(req.body.description)
+
+
     fs.readFile(jsonFile, 'utf8', function (err, data) {
         var choreList = eval(data)
         choreList.push(newChore)
         fs.writeFile(jsonFile, JSON.stringify(choreList), () => {if (err) {throw err}})
     })
-    
+
     res.redirect('/chorelist')
 });
 

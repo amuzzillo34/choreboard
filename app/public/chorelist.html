@@ -32,23 +32,23 @@
 
         <div class="locationLabel">
           <div id="Kitchen">
-            <h4 class="underline" id="kitchen">Kitchen:</h4>
+            <h4 class="underline choreName" id="kitchen">Kitchen:</h4>
           </div>
 
           <div id="Bedroom">
-            <h4 class="underline" id="bedroom">Bedroom:</h4>
+            <h4 class="underline choreName" id="bedroom">Bedroom:</h4>
           </div>
 
           <div id="LaundryRoom">
-            <h4 class="underline" id="laundryroom">Laundry Room:</h4>
+            <h4 class="underline choreName" id="laundryroom">Laundry Room:</h4>
           </div>
 
           <div id="Bathroom">
-            <h4 class="underline" id="bathroom">Bathroom:</h4>
+            <h4 class="underline choreName" id="bathroom">Bathroom:</h4>
           </div>
 
           <div id="LivingRoom">
-            <h4 class="underline" id="livingroom">Living Room:</h4>
+            <h4 class="underline choreName" id="livingroom">Living Room:</h4>
           </div>
 
         </div>
@@ -89,7 +89,7 @@
                         if (!jsonData[i].isCompleted) {
                             var selectorString = "#" + jsonData[i].location
                             var choreIndex = i
-                            $(selectorString).append("<button id=" + choreIndex + " onclick='viewChore(this.id)'>" + jsonData[i].name + "</button>" + +"<p>" + jsonData[i].who + "</p>" + "<p>" + jsonData[i].date + "</p>");
+                            $(selectorString).append("<button class=choreBtn id=" + choreIndex + " onclick='viewChore(this.id)'>" + jsonData[i].name + "</button>" + jsonData[i].who + " -- " + jsonData[i].date );
                         }
                     }
 
