@@ -64,14 +64,14 @@
           // Logged into your app and Facebook.
             console.log('Successfully logged in with Facebook');
             //proceed to index page
-            FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+            //FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
         }
       }
 
-      function changeUser{
+      /*function changeUser{
         $('.facebookLogin').hide();
         $('#username').text(response.name);
-      }
+      }*/
 
       window.fbAsyncInit = function() {
         FB.init({

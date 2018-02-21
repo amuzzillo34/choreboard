@@ -60,7 +60,7 @@
           </div>
           <div class="col-xs-6">
             <!-- Add chore button -->
-            <a href="addchore" class="navBtn">Add Chore</a>
+            <a href="addchore" class="navBtn">Create Chore</a>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
                         if (!jsonData[i].isCompleted) {
                             var selectorString = "#" + jsonData[i].location
                             var choreIndex = i
-                            $(selectorString).append("<button id=" + choreIndex + " onclick='viewChore(this.id)'>" + jsonData[i].name + "</button>" + "<p>" + jsonData[i].date + "</p>");
+                            $(selectorString).append("<button id=" + choreIndex + " onclick='viewChore(this.id)'>" + jsonData[i].name + "</button>" + +"<p>" + jsonData[i].who + "</p>" + "<p>" + jsonData[i].date + "</p>");
                         }
                     }
 
