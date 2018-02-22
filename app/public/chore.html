@@ -13,50 +13,29 @@
     <link href="../css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <!-- this is a comment in HTML -->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
 </head>
 
-<body>
+<body class="backgroundColor infoMargin">
     <div class="container">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fa fa-bars"></i>
-				</button>
-                <a class="navbar-brand js-scroll-trigger" href="../">Apartment 123</a>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="../profile">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="../chorelist">Full Chore List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="../settings">Settings</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <!--***************************
+        FIX ROUTING TO GO BACK TO /INDEX NOT /CHORE/INDEX
+        *****************************-->
+      <div class="header">
+        <a href="index">
+          <img class="homeBtn" src="img/homeLogo.png">
+          Apartment 123
+        </a>
+      </div>
 
-        <div class="choreContainer">
-            <h3>Individual chore page</h3>
-        </div>
+      <div class="choreContainer">
+        <h3>Individual chore page</h3>
+      </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://code.jquery.com/jquery.js"></script>
         <!-- Include all compiled plugins (blelow), or include individual files as needed -->
-        <script src="../js/custom.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script>
             var urlArr = window.location.href.split('/')
@@ -68,6 +47,7 @@
                     '<button> <a href="../chorelist">', '</a> </button>', '<button> <a href="../chorelist">', '</a> </button>'
                 ]
                 var labelStrings = ['<h5>Chore Name: </h5>', '<h5>Chore Owner: </h5>', '<h5>Date: </h5>', '<h5>Location: </h5>', '<h5>Description: </h5>', '<h5></h5>', '<p></p>']
+
                 var masterStr = ''
                 for (var i = 0; i < stringComponents.length; i += 2) {
                     masterStr += labelStrings[i / 2] + stringComponents[i] + paramsArr[i / 2] + stringComponents[i + 1]
@@ -89,6 +69,7 @@
             };
             xhttp.open("POST", "/api/chore/" + jsonID, true);
             xhttp.send();
+
 
         </script>
 

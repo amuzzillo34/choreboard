@@ -13,82 +13,64 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!-- this is a comment in HTML -->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
 </head>
 
-<body>
+<body class="backgroundColor infoMargin">
     <div class="container">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fa fa-bars"></i>
-				</button>
-                <a class="navbar-brand js-scroll-trigger " href="/">Apartment 123</a>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="profile">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="chorelist">Full Chore List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="settings">Settings</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <div class="header">
+        <a href="index">
+          <img class="homeBtn" src="img/homeLogo.png">
+          Apartment 123
+        </a>
+      </div>
 
-        <!-- Main Body -->
-        <div>
-            <h3 style="text-align: center">Chores</h3>
+      <!-- Main Body -->
+      <div>
+        <h3>Chores</h3>
 
-            <div class="locationLabel">
-                <div id="Kitchen">
-                    <h4 id="kitchen">Kitchen:</h4>
-                </div>
+        <div class="locationLabel">
+          <div id="Kitchen">
+            <h4 class="underline choreName" id="kitchen">Kitchen:</h4>
+          </div>
 
-                <div id="Bedroom">
-                    <h4 id="bedroom">Bedroom:</h4>
-                </div>
+          <div id="Bedroom">
+            <h4 class="underline choreName" id="bedroom">Bedroom:</h4>
+          </div>
 
-                <div id="LaundryRoom">
-                    <h4 id="laundryroom">Laundry Room:</h4>
-                </div>
+          <div id="LaundryRoom">
+            <h4 class="underline choreName" id="laundryroom">Laundry Room:</h4>
+          </div>
 
-                <div id="Bathroom">
-                    <h4 id="bathroom">Bathroom:</h4>
-                </div>
+          <div id="Bathroom">
+            <h4 class="underline choreName" id="bathroom">Bathroom:</h4>
+          </div>
 
-                <div id="LivingRoom">
-                    <h4 id="livingroom">Living Room:</h4>
-                </div>
+          <div id="LivingRoom">
+            <h4 class="underline choreName" id="livingroom">Living Room:</h4>
+          </div>
 
-            </div>
-
-            <!-- Add chore button -->
-            <a href="addchore">
-                <h3 class="box box-default text-center">Add Chore</h3>
-            </a>
         </div>
 
+        <div class="row" style="margin-top: 10%">
+          <div class="col-xs-6">
+            <!-- Back button -->
+            <a href="index" class="navBtn">Back</a>
+          </div>
+          <div class="col-xs-6">
+            <!-- Add chore button -->
+            <a href="addchore" class="navBtn">Create Chore</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://code.jquery.com/jquery.js"></script>
 
         <!-- Include all compiled plugins (blelow), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/custom.js"></script>
         <script>
             function viewChore(uniqueID) {
                 window.location.href = '/chore/'+uniqueID
@@ -98,8 +80,8 @@
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     // Typical action to be performed when the document is ready:
-                    console.log(xhttp, '!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-                    console.log(xhttp.responseText);
+                    //console.log(xhttp, '!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                    //console.log(xhttp.responseText);
                     var jsonData = JSON.parse(xhttp.responseText)
 
 
@@ -107,7 +89,7 @@
                         if (!jsonData[i].isCompleted) {
                             var selectorString = "#" + jsonData[i].location
                             var choreIndex = i
-                            $(selectorString).append("<button id=" + choreIndex + " onclick='viewChore(this.id)'>" + jsonData[i].name + "</button>" + "<p>" + jsonData[i].date + "</p>");
+                            $(selectorString).append("<button class=choreBtn id=" + choreIndex + " onclick='viewChore(this.id)'>" + jsonData[i].name + "</button>" + jsonData[i].owner + " -- " + jsonData[i].date );
                         }
                     }
 

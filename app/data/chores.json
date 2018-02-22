@@ -5,4 +5,11 @@
     "location": "Kitchen",
     "description": "Grab the mop and its holder from the closet. Fill with water, blah blah, blah blah, finish mopping",
     "isCompleted": false
+}, {
+    "name": "ANTHONY IS COOL",
+    "owner": "Anthony",
+    "date": "2222-02-22",
+    "location": "Bedroom",
+    "description": "asdfasdfasdf",
+    "isCompleted": false
 }]

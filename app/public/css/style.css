@@ -3,7 +3,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  color: black;
+  color: #BBDEF0;
   background-color: white;
 }
 
@@ -32,125 +32,35 @@ a{
 }
 
 /*Strip the ul of padding and list styling*/
-ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    position: absolute;
+ol {
+  position: relative;
 }
 
-/*Create a horizontal list with spacing*/
-li {
-    display:inline-block;
-    float: left;
+/*background color for each page */
+.backgroundColor{
+  background-color: #272932;
 }
 
-/*Style for menu links*/
-li a {
-    display:block;
-    min-width:140px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: black;
-    background: white;
-    border: 1px solid #ab1234;
-    text-decoration: none;
+.infoMargin{
+  margin: 3% 0;
 }
 
-/*Responsive Styles*/
-@media screen and (max-width : 760px){
-    /*Make dropdown links appear inline*/
-    ul {
-        position: static;
-        display: none;
-    }
-    /*Create vertical spacing*/
-    li {
-        margin-bottom: 1px;
-    }
-    /*Make all menu links full width*/
-    ul li, li a {
-        width: 100%;
-    }
-    /*Display 'show menu' link*/
-    .show-menu {
-        display:block;
-    }
+/* login page margins and font color */
+.loginStyle{
+  color: #BBDEF0;
 }
 
-#mainNav {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin-bottom: 0;
-  padding-bottom: 2%;
+.form{
+  color: #BBDEF0;
+}
+
+.header{
+  color: #BBDEF0;
+  padding: 0 0 3% 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: white;
-  border-bottom: 1px solid black;
-}
-
-#mainNav .navbar-toggler {
-  font-size: 14px;
-  padding: 12px;
-  color: black;
-  border: 1px solid black;
-}
-
-#mainNav .navbar-brand {
-  font-weight: 800;
-  padding-left: 2%;
-}
-
-#mainNav a {
-  color: black;
-}
-
-#mainNav .navbar-nav .nav-item {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-
-#mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
-  outline: none;
-  background-color: transparent;
-}
-
-#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
-  outline: none;
-  background-color: transparent;
-}
-
-@media (min-width: 750px) {
-  #mainNav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    letter-spacing: 1px;
-    border-bottom: none;
-    background: transparent;
-  }
-  #mainNav.navbar-shrink {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    background: white;
-  }
-  #mainNav .nav-link.active {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  #mainNav .nav-link.active:hover {
-    color: black;
-  }
-}
-
-.locationButton{
-
+  border-bottom: 1px solid white;
 }
 
 .locationLabel h3{
@@ -159,56 +69,106 @@ li a {
 }
 
 .buttonMain{
-  margin: 0 auto;
-  width: 25em;
+  margin: 10% auto;
+  color: #272932;
+  width: 20em;
 }
 
 /* Home Label Box */
 .box {
   margin: 5% 0;
   font-family: "sofia-pro", sans-serif;
-  text-align: center;
   font-weight: 400;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   text-transform: uppercase;
   border-radius: 0; }
 
 .box-banner {
-  color: white;
-  padding: 4% 2%;
-  /*border: 2px solid #ab1234;
-  background-color: #ab1234;*/
-  border: 2px solid black;
-  background-color: black;
+  color: #BBDEF0;
+  padding: 4% 0 2% 0;
+  border-bottom: 2px solid white;
 }
 
 .box-default{
-  color: white;
+  color: #272932;
   padding: 4% 2%;
-  /*border: 2px solid #ab1234;
-  background-color: #ab1234;*/
-  border: 2px solid black;
-  background-color: black;
+  border: 2px solid #BBDEF0;
+  background-color: #BBDEF0;
 }
 
 .box-location{
   padding: 15% 4%;
   margin: 4% 0 0 0;
-  /*color: #ab1234;
-  border: 2px solid #ab1234;*/
-  color: black;
-  border: 2px solid black;
-  background-color: white;
+  color: #272932;
+  text-align: center;
+  border: 2px solid #BBDEF0;
+  background-color: #BBDEF0;
+}
+
+.loginBtn{
+  margin-bottom: 20px
 }
 
 .box-chore{
   padding: 4% 0;
   margin: 3% 0;
-  color: black;
-  /*color: #ab1234;*/
-  /*border: 2px solid #ab1234;*/
-  border: 2px solid black;
-  background-color: white;
+  color: #BBDEF0;
+  border: 2px solid #BBDEF0;
+  background-color: #272932;
+}
+
+.homeBtn{
+  height: 25px;
+  margin-right: 10px;
+}
+
+.smallBtn{
+  width: 10em;
+  text-align: center;
+  color: #272932;
+  margin: 10% 5% 0 0;
+  padding: 2% 4%;
+  border: 2px solid #BBDEF0;
+  background-color: #BBDEF0;
+}
+
+.navBtn{
+  width: 5em;
+  text-align: center;
+  color: #272932;
+  margin-top: 10%;
+  padding: 2% 4%;
+  border: 2px solid #BBDEF0;
+  background-color: #BBDEF0;
+}
+
+.choreBtn{
+  width: 10em;
+  padding: 2% 5%;
+  margin: 2% 10% 0 0;
+  color: #272932;
+  background-color: #BBDEF0;
+}
+
+/* Chore page */
+.underline{
+  border-bottom: 1px solid white;
+  padding-bottom: 3px;
+}
+
+/*Add Chore Page*/
+.choreName{
+  margin: 5% 0 2% 0;
+}
+
+.dropdown{
+  background: white;
+}
+
+.buttonSubmit{
+  width: 10em;
+  color: #272932;
+  margin: 10% 0;
+  padding: 2% 0%;
+  border: 2px solid #BBDEF0;
+  background-color: #BBDEF0;
 }
