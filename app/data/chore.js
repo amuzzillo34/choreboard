@@ -1,5 +1,6 @@
 function Chore() {
     this.name = ''
+    this.owner = ''
     this.date = ''
     this.location = ''
     this.description = ''
@@ -13,6 +14,10 @@ Chore.prototype.verifyComplete = function (complete) {
 
 Chore.prototype.addName = function (name) {
     this.name = name
+}
+
+Chore.prototype.addOwner = function(owner) {
+    this.owner = owner
 }
 
 Chore.prototype.addDate = function (date) {

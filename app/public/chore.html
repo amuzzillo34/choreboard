@@ -48,7 +48,7 @@
                 </div>
             </div>
         </nav>
-        
+
         <div class="choreContainer">
             <h3>Individual chore page</h3>
         </div>
@@ -61,32 +61,34 @@
         <script>
             var urlArr = window.location.href.split('/')
             var jsonID = urlArr[urlArr.length - 1]
-            function parseHTMLString(name, date, location, description) {
-                var paramsArr = [name,date,location,description, 'Back', 'Complete']
-                var stringComponents = ['<p>','</p>','<p>','</p>','<p>','</p>','<p>','</p>','<button>','</button>','<button>','</button>']
+
+            function parseHTMLString(name, date, owner, location, description) {
+                var paramsArr = [name, date, owner, location, description, 'Back', 'Complete']
+                var stringComponents = ['<p>', '</p>', '<p>', '</p>', '<p>', '</p>', '<p>', '</p>', '<p>', '<p>',
+                    '<button> <a href="../chorelist">', '</a> </button>', '<button> <a href="../chorelist">', '</a> </button>'
+                ]
+                var labelStrings = ['<h5>Chore Name: </h5>', '<h5>Chore Owner: </h5>', '<h5>Date: </h5>', '<h5>Location: </h5>', '<h5>Description: </h5>', '<h5></h5>', '<p></p>']
                 var masterStr = ''
-                for (var i = 0; i<stringComponents.length; i += 2) {
-                    masterStr += stringComponents[i] + paramsArr[i/2] + stringComponents[i+1]
+                for (var i = 0; i < stringComponents.length; i += 2) {
+                    masterStr += labelStrings[i / 2] + stringComponents[i] + paramsArr[i / 2] + stringComponents[i + 1]
                 }
                 return masterStr
             }
-            
+
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     // Typical action to be performed when the document is ready:
                     var choreObj = JSON.parse(xhttp.responseText)
-                    console.log(choreObj)
-                    var htmlStr = parseHTMLString(choreObj.name, choreObj.date, choreObj.location, choreObj.description)
-                    console.log(htmlStr)
+                    //console.log(choreObj)
+                    var htmlStr = parseHTMLString(choreObj.name, choreObj.owner, choreObj.date, choreObj.location, choreObj.description)
+                    //console.log(htmlStr)
                     $('.choreContainer').append(htmlStr)
 
                 }
             };
-            xhttp.open("POST", "/api/chore/"+jsonID, true);
+            xhttp.open("POST", "/api/chore/" + jsonID, true);
             xhttp.send();
-            
-            
 
         </script>
 
