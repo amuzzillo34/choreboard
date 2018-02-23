@@ -19,19 +19,19 @@
 <body class="backgroundColor infoMargin">
     <div class="container">
 
-      <!--***************************
+        <!--***************************
         FIX ROUTING TO GO BACK TO /INDEX NOT /CHORE/INDEX
         *****************************-->
-      <div class="header">
-        <a href="index">
-          <img class="homeBtn" src="img/homeLogo.png">
+        <div class="header">
+            <a href="../index">
+          <img class="homeBtn" src="../img/homeLogo.png">
           Apartment 123
         </a>
-      </div>
+        </div>
 
-      <div class="choreContainer">
-        <h3>Individual chore page</h3>
-      </div>
+        <div class="choreContainer">
+            <h3>Individual chore page</h3>
+        </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://code.jquery.com/jquery.js"></script>
@@ -41,11 +41,13 @@
             var urlArr = window.location.href.split('/')
             var jsonID = urlArr[urlArr.length - 1]
 
+
             function parseHTMLString(name, date, owner, location, description) {
                 var paramsArr = [name, date, owner, location, description, 'Back', 'Complete']
                 var stringComponents = ['<p>', '</p>', '<p>', '</p>', '<p>', '</p>', '<p>', '</p>', '<p>', '<p>',
-                    '<button> <a href="../chorelist">', '</a> </button>', '<button> <a href="../chorelist">', '</a> </button>'
+                    '<button> <a href="../chorelist">', '</a> </button>', '<button id="completeButton"> <a href="../chorelist">', '</a> </button>'
                 ]
+                
                 var labelStrings = ['<h5>Chore Name: </h5>', '<h5>Chore Owner: </h5>', '<h5>Date: </h5>', '<h5>Location: </h5>', '<h5>Description: </h5>', '<h5></h5>', '<p></p>']
 
                 var masterStr = ''
@@ -63,13 +65,19 @@
                     //console.log(choreObj)
                     var htmlStr = parseHTMLString(choreObj.name, choreObj.owner, choreObj.date, choreObj.location, choreObj.description)
                     //console.log(htmlStr)
+
+
                     $('.choreContainer').append(htmlStr)
 
                 }
             };
+
+            $("#completeButton").click(function() {
+
+            })
+
             xhttp.open("POST", "/api/chore/" + jsonID, true);
             xhttp.send();
-
 
         </script>
 

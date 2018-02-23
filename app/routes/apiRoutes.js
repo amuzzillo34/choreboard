@@ -40,7 +40,7 @@ apiRouter.get('/api/chores', function (req, res) {
         var choreList = eval(data)
         res.json(choreList)
     })
-});
+}); 
 
 
 /** dataToWrite = '[' + JSON.stringify(person) + ']

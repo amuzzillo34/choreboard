@@ -1,15 +1,1 @@
-[{
-    "name": "Mop Floor",
-    "owner": "Sam",
-    "date": "2022-02-01",
-    "location": "Kitchen",
-    "description": "Grab the mop and its holder from the closet. Fill with water, blah blah, blah blah, finish mopping",
-    "isCompleted": false
-}, {
-    "name": "ANTHONY IS COOL",
-    "owner": "Anthony",
-    "date": "2222-02-22",
-    "location": "Bedroom",
-    "description": "asdfasdfasdf",
-    "isCompleted": false
-}]
+[{"name":"Mop Floor","owner":"Sam","date":"2022-02-01","location":"Kitchen","description":"Grab the mop and its holder from the closet. Fill with water, blah blah, blah blah, finish mopping","isCompleted":false},{"name":"Test Chore!!","owner":"Sam","date":"2222-02-22","location":"LaundryRoom","description":"blah blah blah","isCompleted":false}]
