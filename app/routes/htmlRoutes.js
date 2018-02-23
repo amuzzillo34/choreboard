@@ -5,7 +5,6 @@ var htmlRouter = express.Router()
 
 htmlRouter.get('/', function(req,res){
     res.sendFile(path.join(__dirname, '../public/login.html'))
-    //console.log("hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11")
 });
 
 //htmlRouter.get('/login', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index.html')))

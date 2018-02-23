@@ -19,18 +19,35 @@ apiRouter.post('/api/addChore', function (req, res) {
     fs.readFile(jsonFile, 'utf8', function (err, data) {
         var choreList = eval(data)
         choreList.push(newChore)
-        fs.writeFile(jsonFile, JSON.stringify(choreList), () => {if (err) {throw err}})
+        fs.writeFile(jsonFile, JSON.stringify(choreList), () => {
+            if (err) {
+                throw err
+            }
+        })
     })
 
     res.redirect('/chorelist')
 });
 
-apiRouter.post('/api/chore/:id', function(req,res) {
-    fs.readFile(jsonFile, 'utf8', function(err, data) {
+apiRouter.post('/api/chore/:id', function (req, res) {
+    fs.readFile(jsonFile, 'utf8', function (err, data) {
         var choreList = eval(data)
         var chore = choreList[parseInt(req.params.id)]
-        console.log(chore)
         res.send(chore)
+    })
+})
+
+apiRouter.get('/api/complete/:id', function (req, res) {
+    fs.readFile(jsonFile, 'utf8', function (err, data) {
+        var choreList = eval(data)
+        choreList[req.params.id].isCompleted = true
+        fs.writeFile(jsonFile, JSON.stringify(choreList), () => {
+            if (err) {
+                throw err
+            }
+        })
+
+
     })
 })
 
@@ -40,7 +57,7 @@ apiRouter.get('/api/chores', function (req, res) {
         var choreList = eval(data)
         res.json(choreList)
     })
-}); 
+});
 
 
 /** dataToWrite = '[' + JSON.stringify(person) + ']
