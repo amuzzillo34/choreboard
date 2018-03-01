@@ -20,6 +20,10 @@ htmlRouter.get('/chore/index', function(req,res){
     res.sendFile(path.join(__dirname, '../public/index.html'))
 });
 
+htmlRouter.get('/indexb', function(req,res){
+    res.sendFile(path.join(__dirname, '../public/indexb.html'))
+});
+
 htmlRouter.get('/index', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index.html')))
 
 htmlRouter.get('/chorelist', (req, res) => res.sendFile(path.resolve(__dirname, '../public/chorelist.html')))
