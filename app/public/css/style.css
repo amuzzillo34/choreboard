@@ -121,6 +121,11 @@ ol {
   margin-right: 10px;
 }
 
+.locationBtn{
+  height: 50px;
+  align-items: center;
+}
+
 .smallBtn{
   width: 10em;
   text-align: center;
