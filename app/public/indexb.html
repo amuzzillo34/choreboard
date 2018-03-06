@@ -1,6 +1,21 @@
 <!doctype html>
 
-<head>
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='170852909-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
+
     <title>Shared Chore Board</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,19 +45,14 @@
       <!-- Today's Chores -->
       <h4 class="boxB box-bannerB">Chores by location:</h4>
         <div class="row locationRowB">
-          <div class="col-xs-4">
+          <div class="col-xs-6">
             <a href="chorelist">
-              <img class="locationBtnB" src="img/kitchen.png">
+              <img class="locationBtnB click" src="img/kitchen.png">
             </a>
           </div>
-          <div class="col-xs-4">
+          <div class="col-xs-6">
             <a href="chorelist">
-              <img class="locationBtnB" src="img/bathroom.png">
-            </a>
-          </div>
-          <div class="col-xs-4">
-            <a href="chorelist">
-              <img class="locationBtnB" src="img/bedroom.png">
+              <img class="locationBtnB click" src="img/bathroom.png">
             </a>
           </div>
         </div>
@@ -50,12 +60,20 @@
         <div class="row locationRowB">
           <div class="col-xs-6">
             <a href="chorelist">
-              <img class="locationBtnB" src="img/livingRoom.png">
+              <img class="locationBtnB click" src="img/bedroom.png">
             </a>
           </div>
           <div class="col-xs-6">
             <a href="chorelist">
-              <img class="locationBtnB" src="img/laundry.png">
+              <img class="locationBtnB click" src="img/livingRoom.png">
+            </a>
+          </div>
+        </div>
+        <br>
+        <div class="row locationRowB">
+          <div class="col-xs-6">
+            <a href="chorelist">
+              <img class="locationBtnB click" src="img/laundry.png">
             </a>
           </div>
         </div>
@@ -80,6 +98,17 @@
 
     <!-- Include all compiled plugins (blelow), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/abclick.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115081857-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115081857-1');
+    </script>
 </body>
 
 </html>
