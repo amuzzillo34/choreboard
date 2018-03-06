@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Shared Chore Board</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="backgroundColor infoMargin">
+    <div class="container">
+
+        <div class="header">
+            <a href="index">
+          <img class="homeBtn" src="img/homeLogo.png">
+          Apartment 123
+        </a>
+        </div>
+
+        <!-- Main Body -->
+        <div>
+            <h3>Chores</h3>
+
+            <div class="locationLabel">
+                <div id="Kitchen">
+                    <h4 class="underline choreName" id="kitchen">Kitchen:</h4>
+                </div>
+
+            </div>
+
+            <div class="row" style="margin-top: 10%">
+                <div class="col-xs-6">
+                    <!-- Back button -->
+                    <a href="index" class="navBtn">Back</a>
+                </div>
+                <div class="col-xs-6">
+                    <!-- Add chore button -->
+                    <a href="addchore" class="navBtn">Create Chore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Include all compiled plugins (blelow), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function viewChore(uniqueID) {
+            window.location.href = '/chore/' + uniqueID
+        }
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Typical action to be performed when the document is ready:
+                var jsonData = JSON.parse(xhttp.responseText)
+
+
+                for (var i = 0; i < jsonData.length; i++) {
+                    if (!jsonData[i].isCompleted && jsonData[i].location == "Kitchen") {
+                        var selectorString = "#" + jsonData[i].location
+                        var choreIndex = i
+                        $(selectorString).append("<button class=choreBtn id=" + choreIndex + " onclick='viewChore(this.id)'>" + jsonData[i].name + "</button>" + jsonData[i].owner + " -- " + jsonData[i].date);
+                    }
+                }
+
+            }
+        };
+        xhttp.open("GET", "/api/chores", true);
+        xhttp.send();
+
+    </script>
+
+</body>
+
+</html>

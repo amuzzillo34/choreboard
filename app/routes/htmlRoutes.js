@@ -28,6 +28,16 @@ htmlRouter.get('/index', (req, res) => res.sendFile(path.resolve(__dirname, '../
 
 htmlRouter.get('/chorelist', (req, res) => res.sendFile(path.resolve(__dirname, '../public/chorelist.html')))
 
+htmlRouter.get('/kitchen', (req, res) => res.sendFile(path.resolve(__dirname, '../public/kitchen.html')))
+
+htmlRouter.get('/bathroom', (req, res) => res.sendFile(path.resolve(__dirname, '../public/bathroom.html')))
+
+htmlRouter.get('/bedroom', (req, res) => res.sendFile(path.resolve(__dirname, '../public/bedroom.html')))
+
+htmlRouter.get('/livingroom', (req, res) => res.sendFile(path.resolve(__dirname, '../public/livingroom.html')))
+
+htmlRouter.get('/laundryroom', (req, res) => res.sendFile(path.resolve(__dirname, '../public/laundryroom.html')))
+
 htmlRouter.get('/profile', (req, res) => res.sendFile(path.resolve(__dirname, '../public/profile.html')))
 
 htmlRouter.get('/settings', (req, res) => res.sendFile(path.resolve(__dirname, '../public/settings.html')))
