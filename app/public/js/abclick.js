@@ -9,7 +9,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$(".click").click(likeClick);
+	$(".clickBtn").click(likeClick);
 
 
 }
@@ -17,8 +17,11 @@ function initializePage() {
 function likeClick(e){
 	e.preventDefault();
 	console.log("location button clicked");
-	ga("send", "event", "locationclick", "click");
+	//gtag("send", "event", "locationclick", "click");
+	gtag('event', 'locationclick', {
+		'event_category': 'click'
+	});
 
 	//route to chorelist
-	//window.location.href = '../chorelist.html';
+	window.location.href = '../chorelist.html';
 }
