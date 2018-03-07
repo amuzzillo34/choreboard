@@ -20,5 +20,5 @@ function likeClick(e){
 	ga("send", "event", "locationclick", "click");
 
 	//route to chorelist
-	window.location.href = '../chorelist.html';
+	//window.location.href = '../chorelist.html';
 }
