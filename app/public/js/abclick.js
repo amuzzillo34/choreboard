@@ -17,7 +17,7 @@ function initializePage() {
 function likeClick(e){
 	e.preventDefault();
 	console.log("location button clicked");
-	gtag("send", "event", "locationclick", "click");
+	ga("send", "event", "locationclick", "click");
 
 	//route to chorelist
 	//window.location.href = '../chorelist.html';
