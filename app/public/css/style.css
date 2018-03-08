@@ -54,6 +54,13 @@ ol {
   color: #BBDEF0;
 }
 
+.logo{
+  height: 75px;
+  display: block;
+  margin: 3% auto 0 auto;
+}
+
+/* General page styling */
 .header{
   color: #BBDEF0;
   padding: 0 0 3% 0;
@@ -123,7 +130,7 @@ ol {
 }
 
 .homeBtn{
-  height: 25px;
+  height: 40px;
   margin-right: 10px;
 }
 
