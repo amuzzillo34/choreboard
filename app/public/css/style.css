@@ -74,6 +74,12 @@ ol {
   width: 20em;
 }
 
+.buttonMainLeft{
+  margin: 10% auto 10% 0;
+  color: #272932;
+  width: 23em;
+}
+
 /* Home Label Box */
 .box {
   margin: 5% 0;
@@ -149,7 +155,7 @@ ol {
 .choreBtn{
   width: 10em;
   padding: 2% 5%;
-  margin: 2% 10% 0 0;
+  margin: 3% 10% 0 0;
   color: #272932;
   background-color: #BBDEF0;
 }
@@ -158,6 +164,14 @@ ol {
 .underline{
   border-bottom: 1px solid white;
   padding-bottom: 3px;
+}
+
+.choreIcon{
+  height: 35px;
+}
+
+.room{
+  margin: 0 0 6% 0;
 }
 
 /*Add Chore Page*/
