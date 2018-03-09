@@ -14,13 +14,16 @@
 
 <body class="backgroundColor infoMargin">
 
+    <!-- logo + name -->
     <div class="container form">
       <div>
-        <h1>Shared Chore Board</h1>
+        <img class="logo" src="img/logo.png">
+        <h1 class="text-center">Chore Board</h1>
       </div>
 
       <hr>
 
+      <!-- login form -->
       <form id="loginForm" role="form" method="get" action="/login">
         <h3>Login</h3>
         <div class="form-group">
@@ -34,6 +37,7 @@
         <input type="submit" id="submitBtn" class="btn btn-default loginBtn" value="Login"></input>
       </form>
 
+      <!-- facebook login -->
       <p class="facebookLogin">
         <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
       </p>

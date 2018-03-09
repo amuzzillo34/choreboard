@@ -54,6 +54,13 @@ ol {
   color: #BBDEF0;
 }
 
+.logo{
+  height: 75px;
+  display: block;
+  margin: 3% auto 0 auto;
+}
+
+/* General page styling */
 .header{
   color: #BBDEF0;
   padding: 0 0 3% 0;
@@ -72,6 +79,12 @@ ol {
   margin: 10% auto;
   color: #272932;
   width: 20em;
+}
+
+.buttonMainLeft{
+  margin: 10% auto 10% 0;
+  color: #272932;
+  width: 23em;
 }
 
 /* Home Label Box */
@@ -117,8 +130,13 @@ ol {
 }
 
 .homeBtn{
-  height: 25px;
+  height: 40px;
   margin-right: 10px;
+}
+
+.locationBtn{
+  height: 50px;
+  align-items: center;
 }
 
 .smallBtn{
@@ -144,7 +162,7 @@ ol {
 .choreBtn{
   width: 10em;
   padding: 2% 5%;
-  margin: 2% 10% 0 0;
+  margin: 3% 10% 0 0;
   color: #272932;
   background-color: #BBDEF0;
 }
@@ -153,6 +171,14 @@ ol {
 .underline{
   border-bottom: 1px solid white;
   padding-bottom: 3px;
+}
+
+.choreIcon{
+  height: 35px;
+}
+
+.room{
+  margin: 0 0 6% 0;
 }
 
 /*Add Chore Page*/
@@ -171,4 +197,179 @@ ol {
   padding: 2% 0%;
   border: 2px solid #BBDEF0;
   background-color: #BBDEF0;
+}
+
+.locationRow{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.submit{
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3% 22.5px;
+  padding: 3% 0;
+  color: #FFFEFD;
+  text-align: center;
+  border: 2px solid #007878;
+  background-color: #007878;
+  width: 12.25em;
+  height: 52.375;
+}
+
+/* Version B Styling*/
+
+/*background color for each page */
+.backgroundColorB{
+  background-color: #FFFEFD;
+}
+
+.infoMarginB{
+  margin: 3% 0;
+}
+
+/* login page margins and font color */
+.loginStyleB{
+  color: #007878;
+}
+
+.formB{
+  color: #007878;
+}
+
+.headerB{
+  color: #007878;
+  padding: 0 0 3% 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #007878;
+}
+
+.locationLabelB h3{
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.buttonMainB{
+  margin: 10% auto;
+  color: #FFFEFD;
+  width: 20em;
+}
+
+/* Home Label Box */
+.boxB{
+  margin: 5% 0;
+  font-family: "sofia-pro", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 0; }
+
+.box-bannerB{
+  color: #007878;
+  padding: 4% 0 2% 0;
+  border-bottom: 2px solid #007878;
+}
+
+.box-defaultB{
+  color: #FFFEFD;
+  padding: 4% 2%;
+  border: 2px solid #007878;
+  background-color: #007878;
+}
+
+.box-locationB{
+  padding: 15% 4%;
+  margin: 4% 0 0 0;
+  color: #FFFEFD;
+  text-align: center;
+  border: 2px solid #007878;
+  background-color: #007878;
+}
+
+.loginBtnB{
+  margin-bottom: 20px
+}
+
+.box-choreB{
+  padding: 4% 0;
+  margin: 3% 0;
+  color: #007878;
+  border: 2px solid #007878;
+  background-color: #FFFEFD;
+}
+
+.homeBtnB{
+  height: 25px;
+  margin-right: 10px;
+}
+
+.locationRowB{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.locationBtnB{
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.smallBtnB{
+  width: 10em;
+  text-align: center;
+  color: #FFFEFD;
+  margin: 10% 5% 0 0;
+  padding: 2% 4%;
+  border: 2px solid #007878;
+  background-color: #007878;
+}
+
+.navBtnB{
+  width: 7em;
+  text-align: center;
+  color: #FFFEFD;
+  margin-top: 10%;
+  padding: 6% 8%;
+  border: 2px solid #007878;
+  background-color: #007878;
+}
+
+.choreBtnB{
+  width: 10em;
+  padding: 3% 6%;
+  margin: 2% 10% 0 0;
+  color: #FFFEFD;
+  background-color: #007878;
+}
+
+/* Chore page */
+.underlineB{
+  border-bottom: 1px solid #007878;
+  padding-bottom: 3px;
+}
+
+/*Add Chore Page*/
+.choreNameB{
+  margin: 5% 0 2% 0;
+}
+
+.dropdownB{
+  background: #e5e5e5;
+}
+
+.submitB{
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3% 22.5px;
+  padding: 3% 0;
+  color: #FFFEFD;
+  text-align: center;
+  border: 2px solid #007878;
+  background-color: #007878;
+  width: 12.25em;
+  height: 52.375;
 }

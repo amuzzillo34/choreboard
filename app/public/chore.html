@@ -19,15 +19,12 @@
 <body class="backgroundColor infoMargin">
     <div class="container">
 
-        <!--***************************
-        FIX ROUTING TO GO BACK TO /INDEX NOT /CHORE/INDEX
-        *****************************-->
-        <div class="header">
-            <a href="../index">
-          <img class="homeBtn" src="../img/homeLogo.png">
-          Apartment 123
+      <!-- Logo & Nav to home -->
+      <div class="header">
+        <a href="../index" style="font-size: 28px">
+          <img class="homeBtn" src="../img/logo.png">Apartment 123
         </a>
-        </div>
+      </div>
 
         <div class="choreContainer">
             <h3>Individual chore page</h3>
@@ -43,15 +40,13 @@
 
 
             function parseHTMLString(id, name, date, owner, location, description) {
-                var paramsArr = [name, date, owner, location, description, 'Back', 'Complete']
-                var completeButton = '<button id="completeButton"  onclick="checkOff(this.value)" class = "navBtn"' + ' value=' + id + '>'
-                var stringComponents = ['<p>', '</p>', '<p>', '</p>', '<p>', '</p>', '<p>', '</p>', '<p>', '<p>',
-                    '<button class="navBtn"> <a href="../chorelist" style="color: #272932">', '</a> </button>', completeButton + '<a href="../chorelist" style="color:#272932">', '</a> </button>'
+              var paramsArr = [name, date, owner, location, description, 'Complete', 'Back']
+              var completeButton = '<button id="completeButton"  onclick="checkOff(this.value)" class="buttonMainLeft box box-default text-center"' + ' value=' + id + '>'
+              var stringComponents = ['<p>', '</p>', '<p>', '</p>',     '<p>', '</p>', '<p>', '</p>', '<p>', '<p>', completeButton + '<a href="../chorelist" style="color:#272932; font-size: 20px; letter-spacing: 1px">', '</a> </button>','<button class="buttonMainLeft box box-default text-center"> <a href="../chorelist" style="color:#272932; font-size: 20px; letter-spacing: 1px">', '</a> </button>'
+              ]
 
-                ]
-
-                var labelStrings = ['<h5>Chore Name: </h5>', '<h5>Chore Owner: </h5>', '<h5>Date: </h5>', '<h5>Location: </h5>', '<h5>Description: </h5>', '<h5></h5>', '<p></p>']
-
+              var labelStrings = ['<h4 class="underline       choreName">Chore Name: </h4>', '<h4 class="underline choreName">Chore Owner: </h4>', '<h4 class="underline choreName">Date: </h4>', '<h4 class="underline choreName">Location: </h4>', '<h4 class="underline choreName">Description: </h4>', '<h4 style="margin-bottom: 0px; padding-top: 0px"></h4>', '<p style="margin-bottom: 0px"></p>'
+              ]
                 var masterStr = ''
                 for (var i = 0; i < stringComponents.length; i += 2) {
                     masterStr += labelStrings[i / 2] + stringComponents[i] + paramsArr[i / 2] + stringComponents[i + 1]
