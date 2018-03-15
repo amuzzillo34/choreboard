@@ -218,6 +218,65 @@ ol {
   height: 52.375;
 }
 
+
+.popup{
+    background:rgba(0,0,0,.5);
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    left: 0px;
+    width:100%;
+    z-index:10000;
+}
+
+.popup .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+
+.popup > div {
+    background-color: #272932;
+    border: 3px solid #777;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+
+.popupCloseButton {
+    background-color: #272932;
+    border: 3px solid #777;
+    border-radius: 50px;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+.popupCloseButton:hover {
+    background-color: #FFFEFD;
+}
+
+.popup-style{
+  background-color: #FFFEFD
+}
+
 /* Version B Styling*/
 
 /*background color for each page */
